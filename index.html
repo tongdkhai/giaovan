@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DKT Express - Nhà cung cấp, shipper toàn quốc hàng đầu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            font: 400 15px Raleway, sans-serif;
+            line-height: 1.8;
+            color: #000000;
+        }
+        h2 {
+            font-size: 35px;
+            text-transform: uppercase;
+            color: #303030;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+         h4 {
+             font-size: 25px;
+            line-height: 1.375em;
+            color: #303030;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }  
+
+        .gradient {
+            background: rgb(131,58,180);
+            background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+        }
+
+        .logo {
+            color: #0d49b8;
+            font-size: 200px;
+        }
+
+        .logo-small {
+            color: #0c53d6;
+            font-size: 50px;
+        }
+        @media screen and (max-width: 768px){
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+        }
+        .jumbotron {
+            background-color: #1ace5f;
+            color: rgb(247, 247, 247);
+            padding: 100px 25px;
+            margin-bottom: 0px;
+            font-family: Poppins, sans-serif;
+        }
+        .container-fluid {
+            padding: 60px 50px;
+        }
+        
+        .bg-gradient {
+            background: rgb(255,109,109);
+            background: linear-gradient(90deg, rgba(255,109,109,1) 0%, rgba(244,100,100,1) 50%, rgba(255,200,124,1) 100%);
+        }
+
+        .thumnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+
+        .fontbig {
+            font-size: 25px;
+        }
+
+        .thumnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+
+        .carousel-control.right, .carousel-control.left {
+            background-image: none;
+            color: #1e10e6;
+        }
+
+        .carousel-indicators li {
+            border-color: #162be6;
+        }
+
+        .carousel-indicators li.active {
+            background-color: #2c1ef4;
+        }
+
+        .item h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            font-weight: 400;
+            font-style: italic;
+            margin: 70px 0;
+        }
+
+        .item span {
+            font-size: normal;
+        }
+
+        .panel {
+            border: 1px solid #5d6dff;
+            border-radius: 0;
+            transition: bow-shadow 0.5s;
+        }
+
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(161, 145, 145, 0.2);
+        }
+
+        .panel-footer .btn:hover {
+            border: 1px solid #5d6dff;
+            background-color: #fff !important;
+            color: #5d6dff;
+        }
+
+        .panel-heading {
+            color: #fff !important;
+            background-color: #5d6dff !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .fontsmall {
+            font-size: 20px;
+        }
+
+        .panel-footer {
+            background-color: white !important;
+        }
+
+        .panel-footer h3 {
+            font-size: 32px;
+        }
+
+        .panel-footer h4 {
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+        }
+
+        .panel-footer .btn {
+            margin: 15px 0;
+            background-color: #5d6dff;
+            color: #fff;
+        }
+
+        footer .glyphicon {
+            font-size: 30px;
+            margin-bottom: 30px;
+            color: #000000;
+        }
+
+        .navbar {
+           margin-bottom: 0;
+           background-color: #f4511e;
+           z-index: 9999;
+           border: 0;
+           font-size: 16px !important;
+           line-height: 1.42857143 !important;
+           letter-spacing: 4px;
+           border-radius: 0;
+           font-family: Poppins, sans-serif;
+        }
+        .navbar li a, .navbar .navbar-brand {
+            color: rgb(0, 0, 0) !important;
+        }
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+           color: #f4511e !important;
+           background-color: rgb(0, 0, 0) !important;
+        }
+        .navbar-default .navbar-toggle {
+           border-color: transparent;
+           color: rgb(0, 0, 0) !important;
+        }
+
+        .image1 {
+            height: 100px;
+        }
+
+
+    </style>
+</head>
+<body id="myPage">
+    <div class="jumbotron gradient text-center">
+        <h1>DKT Express</h1>
+        <p>Chúng tôi chuyên cung cấp các nhà cung cấp, shipper toàn quốc cho các bạn</p>
+        <form class="form-inline">
+            <div class="input-group">
+                <input type="email" class="form-control" size="50" placeholder="Địa chỉ Email" required>
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-primary">Đăng kí</button>
+                </div>
+            </div>
+        </form>
+    </div>
+        <svg class="gradient" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 180"><path fill="#fff" fill-opacity="1" d="M0,160L48,138.7C96,117,192,75,288,48C384,21,480,11,576,32C672,53,768,107,864,133.3C960,160,1056,160,1152,138.7C1248,117,1344,75,1392,53.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    
+    <section class="companies">
+        <div class="container text-center">
+            <div class="row g-5">
+                <div class="col-sm-4">
+                    <img src="image/giao hang.png" class="img-fluid" style="width: 350px; height: 200px;">
+                </div>
+                <div class="col-sm-4">
+                    <img src="image/giao hang 3.png" class="img-fluid" style="width:350px; height: 200px;">
+                </div>
+                <div class="col-sm-4">
+                    <img src="image/giao hang 2.jpg" class="img-fluid" style="width: 350px; height: 200px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="about" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>Về chúng tôi</h2>
+                <br>
+                <h4>Công ty chúng tôi chuyên cung cấp cho bạn những nhà cung cấp, shipper tốt nhất, chất lượng nhất Việt Nam</h4>
+                <p>Công ty chúng tôi chuyên cung cấp thông tin về những nhà cung cấp bán giày chất lượng, hàng đầu Việt Nam như Adidas, Nike, Vans,...Hay công ty chúng tôi cũng cung cấp cho bạn thông tin những shipper cực kỳ uy tín, có kinh nghiệm lâu 
+                    năm trong ngành giao hàng, có đánh giá tốt từ nhiều khách hàng,...
+                </p>
+                <button class="btn btn-primary btn-lg">Tìm hiểu thêm</button>
+            </div>
+
+            <div class="col-sm-4 text-center">
+                <img src="image/Anh-profile-cong-ty-2.jpg" class="img-fluid" style="width: 500px; border-radius: 25%;">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-gradient">
+        <div class="row">
+            <div class="col-sm-4 text-center" style="top: 60px;">
+                <img src="image/chup-anh-profile-cong-ty-kpmg-4.jpg" class="img-fluid" style="width: 450px; border-radius: 25%;">
+            </div>
+
+            <div class="col-sm-8">
+            <h2>Giá trị của chúng tôi</h2>
+            <h4><strong>Nhiệm vụ:</strong> Nhiệm vụ của chúng tôi là giúp cho bạn tìm hiểu, lựa chọn được những nhà cung cấp tốt, chất lượng nhất. Chúng tôi còn giúp bạn
+            duy trì được nguồn hàng tốt, chất lượng, lâu dài. Chúng tôi cũng cung cấp cho bạn những shipper uy tín nhất, làm việc một cách nhiệt tình nhất, tinh thần phục vụ khách hàng
+        một cách hoàn hảo nhất.</h4>
+            <p><strong>Tầm nhìn chiến lược:</strong> Tầm nhìn của chúng tôi đến năm 2022. Chúng tôi sẽ dẫn đường cho tương lai của ngành giao hàng, làm phong phú thêm cuộc sống trên toàn thế giới với những cách di chuyển an toàn và có trách nhiệm nhất đối với mọi người. Thông qua cam kết về chất lượng, liên tục đổi mới và tôn trọng hành tinh, chúng tôi đặt mục tiêu vượt quá mong đợi và được đền đáp bằng một nụ cười. Chúng tôi sẽ đáp ứng các mục tiêu đầy thách thức của chúng tôi bằng cách thu hút tài năng và niềm đam mê của mọi người, những người tin rằng luôn có một cách tốt hơn.</p>
+        </div>
+        </div>
+    </div>
+
+    <div id="nhacungcap" class="container-fluid text-center">
+        <h2>Nhà cung cấp</h2>
+        <h4>Những nhà cung cấp mà chúng tôi cung cấp thông tin cho bạn</h4>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="image/nike.jpg" style="height: 100px; width: 100px;">
+                <h4>Nike</h4>
+                <p>Nike, Inc. là một tập đoàn đa quốc gia của America hoạt động trong lĩnh vực thiết kế, phát triển, sản xuất, quảng bá cũng như kinh doanh các mặt hàng giày dép, quần áo, phụ kiện, trang thiết bị và dịch vụ liên quan đến thể thao. Trụ sở của công ty được đặt gần Beaverton, Oregon, tại khu vực đô thị Portland.</p>
+            </div>
+
+            <div class="col-sm-4">
+                 <img src="image/adidas.png" style="height: 100px; width: 100px;">
+                <h4>Adidas</h4>
+                <p>Adidas ltd AG là một nhà sản xuất dụng cụ thể thao của Đức, một thành viên của Adidas Group, bao gồm cả công ty dụng cụ thể thao Reebok, công ty golf Taylormade, công ty sản xuất bóng golf Maxfli và Adidas golf. Adidas là nhà sản xuất dụng cụ thể thao lớn thứ hai trên thế giới.</p>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="image/download.png" style="height: 100px; width: 100px;">
+                <h4>Vans</h4>
+                <p>Vans là thương hiệu thời trang chuyên về giày trượt ván, quần áo và phụ kiện của Mỹ, được thành lập tại Anaheim, California và thuộc sở hữu của tập đoàn VF Corporation</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="image/converse 1.png" style="height: 100px; width: 100px;">
+                <h4>Converse</h4>
+                <p>Converse là một công ty giày của Mỹ chuyên sản xuất giày trượt ván, giày dép thường ngày và quần áo. Được thành lập vào năm 1908, đến này Converse đã trở thành một công ty con của Nike, Inc. kể từ năm 2003</p>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="image/j.png" style="height: 100px; width: 100px;">
+                <h4>Jordan</h4>
+                <p>Logo "Jumpman" thuộc sở hữu của Nike để quảng cáo cho thương hiệu giày thể thao bóng rổ và đồ thể thao khác của Air Jordan. Đó là hình bóng của cựu cầu thủ Chicago Bulls NBA và chủ sở hữu hiện tại của Charlotte Hornets, Michael Jordan.</p>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="image/alex.png" style="height: 100px; width: 100px;">
+                <h4>Alexander McQueen</h4>
+                <p>Alexander McQueen là một nhà mốt xa xỉ của Anh được thành lập bởi nhà thiết kế Alexander McQueen vào năm 1992. Giám đốc sáng tạo hiện tại của nó là Sarah Burton.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="shipper" class="container-fluid bg-gradient text-center">
+        <h2>Shipper uy tín</h2>
+        <h4>Những shipper uy tín tiêu biểu của công ty</h4>
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <div class="thumnail">
+                    <img src="image/images (2).jpg" alt="Anh1" class="image1" style="height: 500px;">
+                    <p><strong>Anh Nguyễn Văn Xuân</strong></p>
+                    <p>"Trong ngành shipper này, tôi có rất nhiều kinh nghiệm và có hơn 10 năm kinh nghiệm làm nghề này. Tôi luôn thực hiện đúng
+                        lời hứa với khách hàng và thực hiện đúng với lời hứa đó một cách hết mình. Do đó tôi luôn được khách hàng tin tưởng và giao
+                        nhiệm vụ cho. Đó là thứ khiến cho tôi trở nên ngày một tốt lên."</p>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="thumnail">
+                    <img src="image/Shopee 2.jpg" alt="Anh2" class="image1" style="height: 500px;">
+                    <p><strong>Anh Lê Xuân Trường</strong></p>
+                    <p>"Tôi luôn cho rằng chỉ cần làm việc chăm chỉ thì sẽ được đền đáp một cách thích đáng. Do đó tôi luôn hoàn thành nhiệm vụ 
+                        khách hàng giao cho một cách nhanh nhất cũng như tốt nhất. Khách hàng là thượng đế là tôn chỉ của tôi."</p>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="thumnail">
+                    <img src="image/shipper-5480-1627288189.jpg" alt="Anh3" class="image1" style="height: 500px;">
+                    <p><strong>Anh Bùi Trọng Tiến</strong></p>
+                    <p>"Tôi cho rằng chỉ cần làm việc một cách nhiệt tình, hết sức mình thì luôn được đền đáp những thành quả xứng đáng. Do đó
+                        , tôi luôn làm việc chăm chỉ một cách hết sức mình, làm hài lòng khách hàng nhất có thể. Đó là phong cách làm việc của tôi."</p>
+                </div>
+            </div>
+        </div> <br>
+         </div>
+
+         <div class="container-fluid text-center">
+             <h2> Những điều mà khách hàng muốn nói</h2>
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <h4> "Chất lượng nhà cung cấp Adidas rất tốt, tôi rất hài lòng về nhà cung cấp mà trang đã giới thiệu cho khách hàng. 
+                      Dịch vụ giao hàng rất tốt, các shipper rất uy tín, làm việc rất có tâm. Rất vui vì đã có trang cung cấp thông 
+                      tin các nhà cung cấp và shipper chất lượng như vậy. Vote 5 sao. Chỉ cần chuẩn bị cho mình một đôi sneaker Adidas, bạn sẽ sẵn sàng cho hành trình cả ngày dài.
+                    Một đôi sneaker Adidas hầu như có thể bên bạn cho mọi hoạt động từ những ngày đi làm năng động, những buổi hẹn hò nhóm bạn đông vui cho đến những giây phút toát mồ hôi ở phòng gym chỉ với một đôi giày duy nhất.
+                    Những bước đi của bạn sẽ bùng nổ phong cách retro với đôi giày Adidas ba sọc được sản xuất với công nghệ PrimeKnit giúp ôm sát đôi bàn chân tạo cảm giác vừa vặn và thoải mái.
+                    Sản phẩm thể thao thời trang này được Adidas sản xuất với nhiều mẫu mã, màu sắc khác nhau với đủ tất cả các size cho người lớn và cả trẻ em "<br><span style="font-size: normal;"><strong>Anh Tống Duy Khải</strong></span> </h4>
+            </div>
+
+            <div class="item">
+                <h4>"Kanye West và Adidas bắt đầu hợp tác vào năm 2015 sau khi West rời Nike. Sự hợp tác này đã loại bỏ Yeezy Boost 750 cùng năm; và được theo sau bởi Adidas Yeezy Boost 350 vào năm sau. Trong khi đó, phiên bản Adidas Yeezy thứ ba có tên Yeezy 950 Duckboot. Có vẻ ngoài hoàn toàn khác biệt so với các phiên bản đầu tiên. Và được coi là Yeezy đắt thứ hai từng được công bố.
+                    Vào năm 2016, ông West đã được nhìn thấy thể thao Á hậu Yeezy Calabasas nổi tiếng. Hình bóng chạy nổi tiếng này chủ yếu hiển thị một cái nhìn chunky lấy cảm hứng từ dòng Ozweego của những năm 1990. Á hậu Calabasas trưng bày hỗn hợp các màu trắng, teal, cam và đen và được ra mắt trong Tuần lễ thời trang New York năm 2017. "<br><span style="font-size: normal;"><strong>Anh Phạm Viết Khương</strong></span> </h4>
+            </div>
+
+            <div class="item">
+                <h4>"Trong cùng một chương trình thời trang nơi Calabasas Runner được tiết lộ. Adidas đã tiết lộ Adidas Yeezy Boost 700 mang mức giá khổng lồ 300 đô la mỗi đôi. Boost 700 là đôi giày chunky đầu tiên trong bộ sưu tập Yeezy. Và được phát hành độc quyền tại một vài nhà bán lẻ.
+                    Phần đầu tiên của Yeezy Boost 700 được gọi là Wave Runner có màu sắc Xám đậm / Trắng phấn / Lõi đen. Tiếp theo là đường màu Mauve hiển thị màu tím nhạt có thể bị nhầm lẫn là màu nâu nhạt từ xa. 
+                    Vào quý cuối cùng của năm 2018, West và Adidas đã tiết lộ phần thứ hai của Yeezy Boost 700 có tên V2. Giày sneaker này chủ yếu chia sẻ cấu hình chunky giống như tổ tiên của nó nhưng với các yếu tố hiện đại hóa để làm cho nó đẹp hơn. Phía trên đã hàn các vật liệu tổng hợp với các chi tiết phản quang 3M ; để làm cho nó nổi bật hơn ngay cả trên ánh sáng yếu." <br> <span style="font-size: normal;"><strong>Chị Nguyễn Thị Thủy</strong></span></h4>
+            </div>
+        </div>
+
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    </div> 
+
+    <div id="pricing" class="container-fluid bg-gradient">
+        <div class="text-center">
+            <h2>Bảng giá</h2>
+            <h4>Chọn những gói phù hợp nhất với bạn</h4>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-deflaut text-center">
+                    <div class="panel-heading">
+                        <h1>Cơ bản</h1>
+                    </div>
+                    <br>
+                    <div class="panel-boby fontsmall">
+                        <p><strong>20</strong> đơn</p>
+                        <p><strong>15</strong> suất</p>
+                        <p><strong>40</strong> lượt</p>
+                        <p><strong>8</strong> số</p>
+                        <p><strong>13</strong> lần</p>
+                    </div>
+                    <br>
+                    <div class="panel-footer">
+                        <h3>49.000 VNĐ</h3>
+                        <h4>/tháng</h4>
+                        <button class="btn btn-lg">Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="panel panel-deflaut text-center">
+                    <div class="panel-heading">
+                        <h1>Nâng cao</h1>
+                    </div>
+                    <br>
+                    <div class="panel-boby fontsmall">
+                        <p><strong>30</strong> đơn</p>
+                        <p><strong>20</strong> suất</p>
+                        <p><strong>50</strong> lượt</p>
+                        <p><strong>10</strong> số</p>
+                        <p><strong>15</strong> lần</p>
+                    </div>
+                    <br>
+                    <div class="panel-footer">
+                        <h3>149.000 VNĐ</h3>
+                        <h4>/tháng</h4>
+                        <button class="btn btn-lg">Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="panel panel-deflaut text-center">
+                    <div class="panel-heading">
+                        <h1>Đặc biệt</h1>
+                    </div>
+                    <br>
+                    <div class="panel-boby fontsmall">
+                        <p><strong>40</strong> đơn</p>
+                        <p><strong>30</strong> suất</p>
+                        <p><strong>60</strong> lượt</p>
+                        <p><strong>15</strong> số</p>
+                        <p><strong>20</strong> lần</p>
+                    </div>
+                    <br>
+                    <div class="panel-footer">
+                        <h3>249.000 VNĐ</h3>
+                        <h4>/tháng</h4>
+                        <button class="btn btn-lg">Đăng ký</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid">
+        <h2 class="text-center">Liên hệ</h2>
+        <div class="row">
+          <div class="col-sm-5 fontbig" style="bottom: 70px;">
+            <p><strong>Hãy liên hệ với chúng tôi:</strong></p>
+            <p><span class="glyphicon glyphicon-map-marker"></span> Số 15, Trần Phú, Hà Đông, Hà Nội</p>
+            <p><span class="glyphicon glyphicon-phone"></span> 0912126969</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> lienhe@gmail.com</p>
+          </div>
+
+
+          <div class="col-sm-7">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="name" name="name" placeholder="Họ tên" type="text" required>
+              </div>
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+              </div>
+            </div>
+            <textarea class="form-control" id="comments" name="comments" placeholder="Bình luận" rows="5"></textarea><br>
+            <div class="row">
+              <div class="col-sm-12 form-group">
+                <button class="btn btn-primary pull-right" type="submit" style="font-size: 20px;">Gửi</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+   <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">DKT Express</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">Về chúng tôi</a></li>
+        <li><a href="#nhacungcap">Nhà cung cấp</a></li>
+        <li><a href="#shipper">Shipper uy tín</a></li>
+        <li><a href="#pricing">Giá cả</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<footer class="container-fluid gradient fontbig">
+    <div id="contact" class="col-sm-4">
+        <p><strong>THÔNG TIN LIÊN HỆ</strong></p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Số 15, Trần Phú, Hà Đông, Hà Nội</p>
+        <p><span class="glyphicon glyphicon-phone"></span> 0912126969</p>
+        <p><span class="glyphicon glyphicon-envelope"></span> lienhe@gmail.com</p>
+        <a href="https://www.facebook.com/tongdkhai/"><span class="">Facebook</span></a>
+    </div>
+
+    <div class="col-sm-4">
+
+    </div>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+</body>
+</html>
